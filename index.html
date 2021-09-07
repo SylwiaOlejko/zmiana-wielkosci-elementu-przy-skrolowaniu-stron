@@ -8,8 +8,28 @@
 </head>
 <body>
     <script>
-        let size = 10000;
+
+        const sqere = document.createElement("div");
+        document.body.appendChild(squere);
+         
+        let grow = true;
+        let size = 100; // tu coś jest nie tak
         document.body.style.height = size + "px";
+        squere.style.width = "100%";
+        squere.style.position = fixed;
+        squere.style.left = "0px";
+        squere.style.right = "0px";
+        squere.baskgroundColor = "green";
+        //jak pobrać warność ze zmeinnej size??
+
+    window.addEventListener("scroll", changeHeight(){
+        if(size = window.changeHeight/2);{ 
+            grow = true;
+        }
+        else if (size == 10){
+            grow = false;
+        };
+    };
 
 
     </script>
