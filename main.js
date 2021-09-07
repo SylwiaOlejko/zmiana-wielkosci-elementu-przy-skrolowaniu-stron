@@ -19,14 +19,14 @@ window.addEventListener("scroll", function(){
 
     if(size >= window.innerWidth/2){ // jeśli nasz size jest mniejszy od 
         //połowy okna przeglądarki to pozwól mu rosnąć
-        grow = false;
+        grow = !grow ; //odwracanie wartośći zapisu, może być tez FALSE
     }
     else if (size == 0) { //jeśli size będzie równe 0 to chcemy odwrócić 
         //działanie i napisać grow = true i rośnie i od nowa
         grow = true;
     }
     
-    if (grow == true ) {
+    if (grow) { //grow == true
         size += 5
     squere.style.width = size  + "px";
     squere.style.height = size  + "px";
