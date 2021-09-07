@@ -17,10 +17,12 @@ window.addEventListener("scroll", function(){
   
    
 
-    if(size >= window.innerWidth/2){
+    if(size >= window.innerWidth/2){ // jeśli nasz size jest mniejszy od 
+        //połowy okna przeglądarki to pozwól mu rosnąć
         grow = false;
     }
-    else if (size == 0) {
+    else if (size == 0) { //jeśli size będzie równe 0 to chcemy odwrócić 
+        //działanie i napisać grow = true i rośnie i od nowa
         grow = true;
     }
     
