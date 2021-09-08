@@ -9,27 +9,48 @@
 <body>
     <script>
 
-        const sqere = document.createElement("div");
-        document.body.appendChild(squere);
-         
-        let grow = true;
-        let size = 100; // tu coś jest nie tak
-        document.body.style.height = size + "px";
-        squere.style.width = "100%";
-        squere.style.position = fixed;
-        squere.style.left = "0px";
-        squere.style.right = "0px";
-        squere.baskgroundColor = "green";
-        //jak pobrać warność ze zmeinnej size??
+        let size = 100;
+        let growRect = true;
 
-    window.addEventListener("scroll", changeHeight(){
-        if(size = window.changeHeight/2);{ 
-            grow = true;
-        }
-        else if (size == 10){
-            grow = false;
+        document.body.style.height ="10000px";
+        const div = document.createElement("div");
+        document.body.appendChild(div);
+        
+        div.style.position = fixed;
+        div.style.top = 0;
+        div.style.left = 0;
+        div.style.right = 0;
+        div.style.width = "100%";
+        div.style.height = size + "px";
+        div.style.backgroundColor = "green";
+       
+        
+        
+       
+       
+        const changeHeight () {
+            if (size.window.innerHeight/2) {
+                //growRect = false; //-ten zapis jest poprawny, ale lepszy jest ten na dole
+                growRect = !growRect; //zapisz wartość growRect w przeciwieństwie
+            }
+            else if (size <=0) {
+                //growRect = true;
+                growRect = !growRect;
+            }
+            
+            if(growRect){
+                size += 10;
+               
+            }
+            else{
+                size -= 10;
+                 
+            }
+            div.style.height = soze + "px;"
         };
-    };
+
+    window.addEventListener("scroll", changeHeight)
+       
 
 
     </script>
